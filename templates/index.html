@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-     Hi! This page is under work! 
-</body>
-</html>
+{% extends 'base.html'%}
+
+ 
+    {% block body %}    
+    <form method="post" action="/check_review">
+        {% csrf_token %}
+        <fieldset>
+            
+        {{form}}
+        </fieldset>
+        <div class="form-group mt-3">
+            <button class="btn" type="submit">Submit</button>
+        </div>
+
+    </form>
+     {% endblock body%} 
+  
+
